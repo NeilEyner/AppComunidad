@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <!-- Título de Créditos -->
+    <TextView
+        android:id="@+id/tvCreditsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Créditos"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/cheese_matcha"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <!-- Primer creador -->
+    <TextView
+        android:id="@+id/tvCreator1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Creado por: Nombre 1"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/cheese_matcha"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"
+        android:gravity="center" />
+
+    <!-- Segundo creador -->
+    <TextView
+        android:id="@+id/tvCreator2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Creado por: Nombre 2"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/cheese_matcha"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreator1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:gravity="center" />
+
+    <!-- Botón para volver -->
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:backgroundTint="@color/btnPregunta"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/romantic_gradient">
+
+    <ImageView
+        android:id="@+id/heartDecoration"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_floral_decoration"
+        android:alpha="0.6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuestra Historia Amor"
+        android:textSize="28sp"
+        android:textColor="#FFB6C1"
+        android:fontFamily="@font/call_me_dos"
+        android:textStyle="bold"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21 de Septiembre, 2024"
+                    android:textSize="18sp"
+                    android:textColor="#FF69B4"
+                    android:fontFamily="@font/extra_days"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/storyTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hola, amor. Nos conocimos el año pasado haciendo pasantías en el posgrado. Jaja. Bueno, el primer día no reconocí a nadie, pero conforme pasaron los días, pude darme cuenta de ti, por tu cabello corto. También, aunque tú no recuerdas haberme hablado, yo guardo un recuerdo de nuestra primera conversación. Fue cuando estaba sirviendo el desayuno; te pregunté tu nombre y me dijiste Jacqueline. Luego, Marisol te llamó Jacqui para abreviar, o algo así. Jaja."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/call_me"
+                    android:lineSpacingExtra="8dp"/>
+                <TextView
+                    android:id="@+id/storyTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recuerdo que, al principio, no hablabas con nadie, te quedabas ahí, mirando. También me acuerdo de cuando te atreviste a hablar porque preguntaron algo en la cocina sobre la taza de Boys Over Flowers. Después, cuando ya empezamos a hablar más seguido, fue en el Wally; nos quedamos conversando hasta tarde. Ahí ya te conocí un poco mejor. Jugamos a un juego que no recuerdo bien, pero me ganaste esa vez. Jaja."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/call_me"
+                    android:lineSpacingExtra="8dp"/>
+                <TextView
+                    android:id="@+id/storyTextView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fue en ese momento cuando me di cuenta de que sí quería verte siempre. Pero al llegar a ese punto, las cosas se volvieron tensas. Finalmente, el trece de junio, en una noche llena de preguntas, me atreví a decirte que quería salir contigo. Tenía un poco de miedo de que te echaras atrás, porque tal vez no te gustaba esa vida. Pero las cosas fluyeron bien y me gustó mucho ese tiempo. Aunque a veces sí deseaba más tiempo contigo, no siempre sabía si te trataba como debí, y lo lamento."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/call_me"
+                    android:lineSpacingExtra="8dp"/>
+                <TextView
+                    android:id="@+id/storyTextView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cuando llegó nuestro primer problema, nos arreglamos de buena manera demasiado, y eso es algo que nunca olvidaré. Después, tuvimos algunos inconvenientes que logramos solucionar. Te amo, y perdón por hacerte pasar por esas situaciones."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/call_me"
+                    android:lineSpacingExtra="8dp"/>
+                <TextView
+                    android:id="@+id/storyTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quiero que sepas que eres muy importante para mí. Ahora hemos llegado hasta aquí, pasando momentos buenos y malos, y realmente espero que sigamos juntos por mucho tiempo. Porque amo pasar el tiempo contigo, me encantas. Te amo, amo cada parte de ti, y realmente quiero pasar toda mi vida contigo."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/call_me"
+                    android:lineSpacingExtra="8dp"/>
+                <ImageView
+                    android:id="@+id/couplePhotoImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image2"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:id="@+id/quoteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="&quot;Contigo, cada día es una nueva aventura de amor.&quot;"
+                    android:textSize="18sp"
+                    android:textColor="#FF69B4"
+                    android:fontFamily="@font/call_me"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/flowerDecoration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_floral_decoration"
+        android:alpha="0.6"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- Customizaciones generales pueden ir aquí. -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- Customizaciones específicas de la aplicación pueden ir aquí. -->
+    </style>
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".LevelsActivity">
+
+    <!-- Título de selección de nivel con animación -->
+    <TextView
+        android:id="@+id/tvSelectLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/cheese_matcha"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="Selecciona un Nivel"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="48sp"
+        android:elevation="8dp"
+        android:translationY="-50dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectLevel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Botón Nivel 1 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLevel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/btnProgressColor"
+                android:fontFamily="@font/cheese_matcha"
+                android:padding="16dp"
+                android:text="Nivel 1"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:iconGravity="textStart" />
+
+            <!-- Botón Nivel 2 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLevel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/btnCreditsColor"
+                android:enabled="false"
+                android:fontFamily="@font/cheese_matcha"
+                android:padding="16dp"
+                android:text="Nivel 2"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:iconGravity="textStart" />
+
+            <!-- Botón Nivel 3 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLevel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/btnExitColor"
+                android:enabled="false"
+                android:fontFamily="@font/cheese_matcha"
+                android:padding="16dp"
+                android:text="Nivel 3"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

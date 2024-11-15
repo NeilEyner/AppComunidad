@@ -1,0 +1,81 @@
+package com.example.conversor;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+
+    private EditText editTextBolivianos;
+    private EditText editTextDolares;
+    private EditText editTextEuros;
+    private EditText editTextYenes;
+    private EditText editTextSoles;
+    private EditText editTextReales;
+    private EditText editTextPesos;
+    private EditText editTextPesosChilenos;
+    private Button buttonConvert;
+    private Button buttonClear;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Inicializar los campos de texto
+        editTextBolivianos = (EditText) findViewById(R.id.editTextBolivianos);
+        editTextDolares =(EditText) findViewById(R.id.editTextDolares);
+        editTextEuros =(EditText) findViewById(R.id.editTextEuros);
+        editTextYenes =(EditText) findViewById(R.id.editTextYenes);
+        editTextSoles =(EditText) findViewById(R.id.editTextSoles);
+        editTextReales =(EditText) findViewById(R.id.editTextReales);
+        editTextPesos =(EditText) findViewById(R.id.editTextPesos);
+        editTextPesosChilenos = (EditText)findViewById(R.id.editTextPesosChilenos);
+
+        // Inicializar botones
+        buttonConvert = findViewById(R.id.buttonConvert);
+        buttonClear = findViewById(R.id.buttonClear);
+
+        // Configurar el botón de convertir
+        buttonConvert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                convertCurrency();
+            }
+        });
+
+        // Configurar el botón de limpiar
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearFields();
+            }
+        });
+    }
+
+    private void convertCurrency() {
+        // Aquí puedes implementar la lógica para convertir las monedas
+        // Por ejemplo, podrías tomar el valor de Bolivianos y convertirlo a Dólares, Euros, etc.
+        // Esta es solo una base para que puedas expandirla con la lógica de conversión.
+    }
+
+    private void clearFields() {
+        editTextBolivianos.setText("");
+        editTextDolares.setText("");
+        editTextEuros.setText("");
+        editTextYenes.setText("");
+        editTextSoles.setText("");
+        editTextReales.setText("");
+        editTextPesos.setText("");
+        editTextPesosChilenos.setText("");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+}

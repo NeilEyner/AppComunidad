@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema personalizado para el AlertDialog -->
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#FF4081</item> <!-- Color del botón -->
+        <item name="android:textColorPrimary">#000000</item> <!-- Color del texto principal -->
+        <item name="android:textColorSecondary">#FF4081</item> <!-- Color del texto secundario -->
+        <item name="android:background">#FFFFFF</item> <!-- Color de fondo -->
+    </style>
+</resources>

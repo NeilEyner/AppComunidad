@@ -1,0 +1,379 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="CONVERSOR DE MONEDAS"
+                android:textColor="@color/button_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonConvert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundes_button"
+                    android:padding="2dp"
+                    android:text="Convertir"
+                    android:textColor="@color/button_text_color"
+                     />
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/button_color"
+                    android:text="Limpiar"
+                    android:textColor="@color/button_text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewBolivianos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/bolivianos" />
+
+                <TextView
+                    android:id="@+id/textViewBolivianos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Bolivianos"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextBolivianos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewDolares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/dolares" />
+
+                <TextView
+                    android:id="@+id/textViewDolares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Dólares"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextDolares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewEuros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/euros" />
+
+                <TextView
+                    android:id="@+id/textViewEuros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Euros"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextEuros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewYenes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/yenes" />
+
+                <TextView
+                    android:id="@+id/textViewYenes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Yenes"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextYenes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewSoles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/soles" />
+
+                <TextView
+                    android:id="@+id/textViewSoles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Soles"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextSoles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewReales"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/reales" />
+
+                <TextView
+                    android:id="@+id/textViewReales"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Reales"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextReales"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewPesos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/mexicanos" />
+
+                <TextView
+                    android:id="@+id/textViewPesos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Pesos Mexicanos"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextPesos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageViewPesosChilenos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/chilenos" />
+
+                <TextView
+                    android:id="@+id/textViewYenes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.4"
+                    android:text="Pesos Chilenos"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextPesosChilenos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:background="@color/edit_text_background"
+                    android:ems="10"
+                    android:hint="0.00"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:padding="10dp"
+                android:text="Código: 314"
+                android:textColor="@color/button_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
