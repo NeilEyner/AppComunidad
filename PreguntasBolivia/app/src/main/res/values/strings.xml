@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Preguntas Bolivia</string>
-    <string name="iniciar_juego">Iniciar Juego</string>
-    <string name="creditos">Creditos</string>
-    <string name="salir">Salir</string>
-    <string name="progreso">Progreso</string>
-</resources>

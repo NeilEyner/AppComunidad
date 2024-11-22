@@ -5,7 +5,6 @@ public class LoginResponse {
     private String message;
     private User data;
 
-    // Getters y setters
     public String getStatus() {
         return status;
     }
@@ -37,7 +36,6 @@ class User {
     private String Correo_electronico;
     private int ID_Rol;
 
-    // Getters y setters
     public int getID() {
         return ID;
     }
