@@ -74,11 +74,27 @@ public class LoginActivity extends AppCompatActivity {
                     if ("success".equals(loginResponse.getStatus())) {
                         // Login exitoso, mostrar un mensaje y redirigir al usuario
                         Toast.makeText(LoginActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                        User user = loginResponse.getData();
+                        int rolId = user.getID_Rol();
+                        if (rolId == 1) { // Rol de artesano
+                            Toast.makeText(LoginActivity.this, "Artesano", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                        if (rolId == 2) { // Rol de cliente
+                            Toast.makeText(LoginActivity.this, "Cliente", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                        if (rolId == 3) { // Rol de delivery
+                            Toast.makeText(LoginActivity.this, "Delivery", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                        if (rolId == 4) { // Rol de administrador
+                            Toast.makeText(LoginActivity.this, "Administrador", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, AdministradorActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
 
-                        // Redirigir a la pantalla principal (MainActivity) o a la actividad de tu elección
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
                     } else {
                         // Error en las credenciales
                         Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();

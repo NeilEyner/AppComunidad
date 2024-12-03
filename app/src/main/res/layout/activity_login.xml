@@ -3,26 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F0F0F0">
 
-    <EditText
-        android:id="@+id/emailEditText"
+    <!-- Logo de la aplicación -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+    android:contentDescription="Logo de la aplicación"
+    android:layout_marginBottom="24dp"
+    android:scaleType="centerCrop" />
+
+    <!-- Campo de correo electrónico -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress" />
+        android:layout_marginBottom="16dp">
 
-    <EditText
-        android:id="@+id/passwordEditText"
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Campo de correo electrónico" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        android:layout_marginBottom="24dp">
 
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Campo de contraseña" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón de inicio de sesión -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesión" />
+        android:text="Iniciar sesión"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#0f4d0f"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
