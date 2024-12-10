@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvFechaCompra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="21 Oct 2024"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvEstadoCompra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En proceso"
+                android:textSize="14sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/estado_compra_background"
+                android:textColor="@color/status_text"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTotalCompra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S/ 650.00"
+            android:textSize="18sp"
+            android:textColor="@color/primary_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvNombreArtesano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comprador: Nombre del artesano"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:drawableStart="@drawable/ic_status_dot"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

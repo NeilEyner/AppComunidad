@@ -1,6 +1,7 @@
 package com.aplicacion.appcomunidad;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,18 +79,38 @@ public class LoginActivity extends AppCompatActivity {
                         int rolId = user.getID_Rol();
                         if (rolId == 1) { // Rol de artesano
                             Toast.makeText(LoginActivity.this, "Artesano", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, ArtesanoActivity.class);
+                            SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putInt("userId", user.getID());
+                            intent.putExtra("ROL_ID", user.getID());
+                            startActivity(intent);
                             finish();
+
                         }
                         if (rolId == 2) { // Rol de cliente
                             Toast.makeText(LoginActivity.this, "Cliente", Toast.LENGTH_SHORT).show();
+                            SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putInt("userId", user.getID()); // Guarda el ID del usuario
+                            editor.apply();
+                            startActivity(new Intent(LoginActivity.this, ComprasActivity.class));
                             finish();
                         }
                         if (rolId == 3) { // Rol de delivery
                             Toast.makeText(LoginActivity.this, "Delivery", Toast.LENGTH_SHORT).show();
+                            SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putInt("userId", user.getID()); // Guarda el ID del usuario
+                            editor.apply();
+                            startActivity(new Intent(LoginActivity.this, EnviosActivity.class));
                             finish();
                         }
                         if (rolId == 4) { // Rol de administrador
                             Toast.makeText(LoginActivity.this, "Administrador", Toast.LENGTH_SHORT).show();
+                            SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putInt("userId", user.getID());
                             Intent intent = new Intent(LoginActivity.this, AdministradorActivity.class);
                             startActivity(intent);
                             finish();

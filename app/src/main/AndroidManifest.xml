@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,10 @@
         android:theme="@style/Theme.AppComunidad"
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.mapbox.ACCESS_TOKEN"
+            android:value="pk.eyJ1IjoiZGVtbzEyMyIsImEiOiJja3drcnU4MmEwM2UyMnFwZ2F1cTRuZ2lpIn0.3s1KoYnFd9U60XYVfH_4hA" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -29,6 +35,26 @@
         </activity>
         <activity
             android:name=".AdministradorActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ArtesanoActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DetalleCompraActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ComprasActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".EnviosActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DetalleEnvioActivity"
             android:exported="true">
         </activity>
     </application>

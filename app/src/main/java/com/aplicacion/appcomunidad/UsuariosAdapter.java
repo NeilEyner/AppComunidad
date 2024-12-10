@@ -5,14 +5,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-
 import java.util.List;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.UsuarioViewHolder> {
     private List<Usuario> usuariosList;
@@ -24,7 +27,6 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
         this.context = context;
     }
 
-    // Crear nueva vista
     @NonNull
     @Override
     public UsuarioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,17 +35,15 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
         return new UsuarioViewHolder(view);
     }
 
-    // Vincular datos a la vista
     @Override
     public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position) {
         Usuario usuario = usuariosList.get(position);
-
-        // Establecer datos
         holder.nombreTextView.setText(usuario.getNombre());
         holder.correoTextView.setText(usuario.getCorreo_electronico());
         holder.estadoTextView.setText(usuario.getEstado());
+        holder.estadoButton.setText(usuario.getEstado().equals("ACTIVO") ? "Inhabilitar" : "Habilitar");
 
-        // Cargar imagen de perfil si está disponible
+
         if (usuario.getimagen_url() != null && !usuario.getimagen_url().isEmpty()) {
             Glide.with(holder.itemView.getContext())
                     .load(usuario.getimagen_url())
@@ -56,6 +56,14 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
         } else {
             holder.imagenPerfil.setImageResource(R.drawable.default_profile);
         }
+        holder.estadoButton.setOnClickListener(v -> {
+            String nuevoEstado = usuario.getEstado().equals("ACTIVO") ? "INACTIVO" : "ACTIVO";
+            usuario.setEstado(nuevoEstado);
+            holder.estadoButton.setText(nuevoEstado.equals("ACTIVO") ? "Inhabilitar" : "Habilitar");
+            notifyItemChanged(position);
+            cambiarEstadoUsuario(usuario.getID());
+        });
+
 
 //        // Configurar click listener
 //        holder.itemView.setOnClickListener(v -> {
@@ -65,19 +73,42 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
 //            context.startActivity(intent);
 //        });
     }
+    private void cambiarEstadoUsuario(String usuarioId) {
+        ApiService apiService = ApiClient.getRetrofitInstance().create(ApiService.class);
+        Log.d("API", "URL completa: " + "https://example.com/api/cambiarEstadoUsuario/" + usuarioId);
 
-    // Obtener número de elementos
+        Call<Void> call = apiService.cambiarEstadoUsuario(usuarioId);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    Log.d("API", "Estado del usuario actualizado correctamente");
+                } else {
+                    Log.e("API", "Error al actualizar el estado: " + response.code());
+                    Log.d("API", "ID del usuario: " + usuarioId);
+
+                }
+            }
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.e("API", "Error al conectar con el servidor", t);
+            }
+        });
+    }
+
+
+
     @Override
     public int getItemCount() {
         return usuariosList.size();
     }
 
-    // Clase ViewHolder
     public static class UsuarioViewHolder extends RecyclerView.ViewHolder {
         TextView nombreTextView;
         TextView correoTextView;
         TextView estadoTextView;
         ImageView imagenPerfil;
+        Button estadoButton;
 
         public UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,6 +116,9 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
             correoTextView = itemView.findViewById(R.id.textViewCorreo);
             estadoTextView = itemView.findViewById(R.id.textViewEstado);
             imagenPerfil = itemView.findViewById(R.id.imageViewPerfil);
+            estadoButton = itemView.findViewById(R.id.estadoViewButton);
         }
     }
+
+
 }
